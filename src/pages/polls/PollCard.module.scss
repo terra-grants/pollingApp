@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 350px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  transition: all 0.3s ease-in-out;
+  color: white;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.26);
+    background-color: #353333;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+}
+
+.dateArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+}
