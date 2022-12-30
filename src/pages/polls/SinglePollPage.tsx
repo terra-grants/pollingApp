@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import { GET_POLL } from 'utils/api/queryPolls';
 import parse, { Element } from 'html-react-parser';
 import styles from './SinglePollPage.module.scss'
-import { Container } from 'components/layout';
+import { Container, Grid } from 'components/layout';
 import { Button } from 'components/general';
 type Props = {}
 
@@ -43,10 +43,12 @@ const SinglePollPage = (props: Props) => {
 
         <div>
           <h2>Vote:</h2>
+          <Grid columns={5} gap={32}>
           <Button>Yes</Button>
           <Button>No</Button>
           <Button>Abstain</Button>
           <Button>No With Veto</Button>
+          </Grid>
         </div>
 
 
