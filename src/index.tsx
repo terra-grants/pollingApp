@@ -19,6 +19,7 @@ import InitTheme from "app/InitTheme"
 import ElectronVersion from "app/ElectronVersion"
 import App from "app/App"
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import './styles/ckeditor.css';
 
 const connectorOpts = { bridge: BRIDGE }
 const client = new ApolloClient({
