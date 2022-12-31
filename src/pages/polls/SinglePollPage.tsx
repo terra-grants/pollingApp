@@ -7,19 +7,23 @@ import parse, { Element } from 'html-react-parser';
 import styles from './SinglePollPage.module.scss'
 import { Container, Grid } from 'components/layout';
 import { Button } from 'components/general';
+import { useAddress } from "../../data/wallet";
+import { useDelegations, calcDelegationsTotal } from "../../data/queries/staking";
+
 type Props = {}
 
 const SinglePollPage = (props: Props) => {
     const { id } = useParams<{ id: string }>();
+    const { data: delegations, ...delegationsState } = useDelegations()
+    const address = useAddress()  
+
     const { loading, error, data } = useQuery(GET_POLL, {
         variables: { id: id },
     });
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error</p>;
+    if (error) return <p>Error</p>
     
-    console.log(data.poll.data.attributes.title)
-
 
   return (
     <Container>
