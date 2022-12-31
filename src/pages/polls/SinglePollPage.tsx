@@ -23,7 +23,10 @@ const SinglePollPage = (props: Props) => {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error</p>
+    if (!delegations) return null
     
+    const total = calcDelegationsTotal(delegations)
+
 
   return (
     <Container>
